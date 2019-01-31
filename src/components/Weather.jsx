@@ -48,7 +48,7 @@ class Weather extends Component {
             // );
             console.log(address[0].long_name);
             this.setState({ spinner: true });
-            axios.get(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${address[0].long_name}&units=metric&appid={process.env.WEATHER_API}`)
+            axios.get(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${address[0].long_name}&units=metric&appid=${process.env.WEATHER_API}`)
                 .then((result) => {
                     console.log(result.data);
                     const { name, main, weather } = result.data;
@@ -70,7 +70,7 @@ class Weather extends Component {
     }
 
     render() {
-        const weather_url = `https://maps.googleapis.com/maps/api/js?key={process.env.GOOGLEPLACE_API}&libraries=places`;
+        const weather_url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLEPLACE_API}&libraries=places`;
         return (
             <div>
                 <Script
