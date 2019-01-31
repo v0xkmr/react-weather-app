@@ -70,7 +70,7 @@ class Weather extends Component {
     }
 
     render() {
-        const weather_url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLEPLACE_API}libraries=places`;
+        const weather_url = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLEPLACE_API}&libraries=places`;
         return (
             <div>
                 <Script
